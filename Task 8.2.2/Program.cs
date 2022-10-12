@@ -6,9 +6,25 @@ namespace DriveManager
     {
         static void Main(string[] args)
         {
+            CreateDir();
             GetFilesNum();
         }
-        
+
+        static void CreateDir()
+        {
+            //DirectoryInfo dirInfo = new DirectoryInfo(@"C:\\Files");
+
+
+
+            DirectoryInfo newDir = new DirectoryInfo(@"C:\\Files");
+            
+            if(newDir.Exists)
+            {
+                newDir.CreateSubdirectory(@"NewDir");
+
+            }
+        }
+
         static void GetFilesNum()
         {
             DirectoryInfo dirInfo = new DirectoryInfo(@"C:\\Files");
