@@ -6,17 +6,17 @@ namespace DriveManager
     {
         static void Main(string[] args)
         {
-            string FolderName = @"C\\Files\Test";
-            clearFolder(FolderName);
+            string folderName = @"C\\Files\Test";
+            clearFolder(folderName);
         }
 
-        static void clearFolder(string FolderName)
+        static void clearFolder(string folderName)
         {
             try
             {
-                if (Directory.Exists(FolderName))
+                if (Directory.Exists(folderName))
                 {
-                    DirectoryInfo dir = new DirectoryInfo(FolderName);
+                    DirectoryInfo dir = new DirectoryInfo(folderName);
 
                     foreach (FileInfo fi in dir.GetFiles())
                     {
