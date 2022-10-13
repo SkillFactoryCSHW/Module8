@@ -35,6 +35,5 @@ namespace DriveManager
                 Console.WriteLine($"Ошибка: {e}");
             }
         }
-        }
     }
 }
