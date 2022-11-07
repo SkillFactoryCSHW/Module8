@@ -6,10 +6,10 @@ namespace DriveManager
     {
         static void Main(string[] args)
         {
-            DirectoryInfo d = new DirectoryInfo(@"C\\Files\Test");
-            DirSize(d);
+            DirectoryInfo dir = new DirectoryInfo(@"C\\Files\Test");
+            DirSize(dir);
         }
-        public static long DirSize(DirectoryInfo d)
+        public static long DirSize(DirectoryInfo dir)
         {
             string folder = @"C\\Files\Test";
 
@@ -18,12 +18,12 @@ namespace DriveManager
                 if (Directory.Exists(folder))
                 {
                     long size = 0;
-                    FileInfo[] fis = d.GetFiles();
+                    FileInfo[] fis = dir.GetFiles();
                     foreach (FileInfo fi in fis)
                     {
                         size += fi.Length;
                     }
-                    DirectoryInfo[] dis = d.GetDirectories();
+                    DirectoryInfo[] dis = dir.GetDirectories();
                     foreach (DirectoryInfo di in dis)
                     {
                         size += DirSize(di);
