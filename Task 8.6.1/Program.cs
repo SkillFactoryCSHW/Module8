@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-//Path to your f
+//Path to your folder
 string folderName = @"C\\Files\Test";
 
 DirEraser eraser = new DirEraser(folderName);
