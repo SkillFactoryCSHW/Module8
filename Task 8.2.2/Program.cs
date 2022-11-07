@@ -12,10 +12,6 @@ namespace DriveManager
 
         static void CreateDir()
         {
-            //DirectoryInfo dirInfo = new DirectoryInfo(@"C:\\Files");
-
-
-
             DirectoryInfo newDir = new DirectoryInfo(@"C:\\Files");
             
             if(newDir.Exists)
