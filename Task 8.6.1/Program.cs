@@ -1,39 +1,9 @@
 ﻿using System;
 using System.IO;
-namespace DriveManager
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string folderName = @"C\\Files\Test";
-            clearFolder(folderName);
-        }
 
-        static void clearFolder(string folderName)
-        {
-            try
-            {
-                if (Directory.Exists(folderName))
-                {
-                    DirectoryInfo dir = new DirectoryInfo(folderName);
+//Path to your f
+string folderName = @"C\\Files\Test";
 
-                    foreach (FileInfo fi in dir.GetFiles())
-                    {
-                        fi.Delete();
-                    }
+DirEraser eraser = new DirEraser(folderName);
 
-                    foreach (DirectoryInfo di in dir.GetDirectories())
-                    {
-                        clearFolder(di.FullName);
-                        di.Delete();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Ошибка: {e}");
-            }
-        }
-    }
-}
+Console.WriteLine($"{folderName} { eraser.CheckDir}");
